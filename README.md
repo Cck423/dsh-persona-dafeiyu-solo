@@ -105,6 +105,10 @@ dsh plugin --profile desktop add github:Cck423/dsh-persona-dafeiyu-solo
 
 不喜欢就改。它就是一个 Markdown 文件。
 
+### 它怎么变的
+
+改动记录在 [`CHANGELOG.md`](CHANGELOG.md)——每次为什么改、改了什么，都写在那里。人设不是一次写完就定死的。
+
 ## 功能
 
 保留上游全部功能：
