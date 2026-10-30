@@ -1,0 +1,21 @@
+# dsh-persona-dafeiyu-solo bundle patch
+# 把「人设」行插进 profile 的插件树。行名从 profile 自己的 node_modules 解析
+# （`dsh plugin --profile <profile> add <本包路径>` 或 Web 插件页安装本包后即可）。
+#
+# 本包是 dsh-persona-dafeiyu@0.7.0 的单人设 fork：内置清单里只有「大肥鱼」一条，
+# 没有阿茶、听澜。插件名 / 段落名 / 接口路径 / 存储目录都带 -solo 后缀，
+# 因此可以和上游版本并存而不冲突。
+#
+# 日常用法：在「设置 → 大肥鱼」里切换 / 导入 / 增删改人设，
+# 人设库落在 <DSH_HOME>/storages/dsh-persona-dafeiyu-solo/personas.json。
+#
+# 这里的 config 只是插件级的可选开关：
+#   enabled: false      临时闭嘴（设置页会显示已停用）
+#   suffix: '...'       追加在工具指导之后的人设后缀
+#   order: 0            显式指定前缀段落顺序
+#   prefix / personaFile  会在人设列表里多出一条「config」人设（不再是最高优先级）
+- insert:
+    - id: persona-dafeiyu-solo
+      name: dsh-persona-dafeiyu-solo
+      config:
+        enabled: true
